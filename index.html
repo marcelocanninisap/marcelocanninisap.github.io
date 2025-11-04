@@ -58,11 +58,11 @@
           initializeRefreshTokenStrategy(shellSdk, auth);
 
           // Add a listener expecting activityID
-          shellSdk.onViewState('businessPartnerID', async businessPartnerID => {
+          shellSdk.onViewState('businesspartnerID', async businesspartnerID => {
 
             updateUI(`Loading ...`);
 
-            let serviceContract = await getServiceContract(cloudHost, account, company, businessPartnerID);
+            let serviceContract = await getServiceContract(cloudHost, account, company, businesspartnerID);
 
             updateUI(serviceContract ? `${serviceContract.contractType}` : `NO CONTRACT`);
           });
